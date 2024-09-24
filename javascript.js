@@ -33,70 +33,71 @@ function getHumanChoice (){
 }
 
 
-function playGame (){
-
-    let humanScore = 0;
-    let computerScore = 0;
-
-    for(let i = 0; i < 5; i++){
-
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
     
-        playRound(humanSelection, computerSelection);
-    
-        function playRound(humanChoice, computerChoice) {
-            if (humanChoice === "Rock" && computerChoice === "Rock") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("Tie!");
-            } else if (humanChoice === "Rock" && computerChoice === "Paper") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("You lose! Paper beats Rock.");
-                computerScore++;
-            } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("You win! Rock beats Scissors.");
-                humanScore++;
-            } else if (humanChoice === "Paper" && computerChoice === "Rock") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("You win! Paper beats Rock.");
-                humanScore++;
-            } else if (humanChoice === "Paper" && computerChoice === "Paper") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("Tie!");
-            } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("You lose! Scissors beats Paper.");
-                computerScore++;
-            } else if (humanChoice === "Scissors" && computerChoice === "Rock") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("You lose! Rock beats Scissors.");
-                computerScore++;
-            } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("You win! Scissors beats Paper.");
-                humanScore++;
-            } else if (humanChoice === "Scissors" && computerChoice === "Scissors") {
-                console.log("Your choice: " + humanChoice);    
-                console.log("Computers choice: " + computerChoice);
-                console.log("Tie!");
-            }
-        }  
-    
-    console.log("*************** Scoreboard ***************");
-    console.log("Your score: " + humanScore);
-    console.log("Computers score " + computerScore);
-    console.log("******************************************")
+playRound(humanSelection, computerSelection);
 
-    }     
-}
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "Rock" && computerChoice === "Rock") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("Tie!");
+    } else if (humanChoice === "Rock" && computerChoice === "Paper") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("You lose! Paper beats Rock.");
+        computerScore++;
+    } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("You win! Rock beats Scissors.");
+        humanScore++;
+    } else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("You win! Paper beats Rock.");
+        humanScore++;
+    } else if (humanChoice === "Paper" && computerChoice === "Paper") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("Tie!");
+    } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("You lose! Scissors beats Paper.");
+        computerScore++;
+    } else if (humanChoice === "Scissors" && computerChoice === "Rock") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("You lose! Rock beats Scissors.");
+        computerScore++;
+    } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("You win! Scissors beats Paper.");
+        humanScore++;
+    } else if (humanChoice === "Scissors" && computerChoice === "Scissors") {
+        console.log("Your choice: " + humanChoice);    
+        console.log("Computers choice: " + computerChoice);
+        console.log("Tie!");
+    }
+}  
 
-playGame();
+console.log("*************** Scoreboard ***************");
+console.log("Your score: " + humanScore);
+console.log("Computers score " + computerScore);
+console.log("******************************************")
+
+
+const selections = document.querySelectorAll(".selection");
+
+selections.forEach((selection) => {
+    selection.addEventListener("click", playRound())
+})
+
+const buttons = document.querySelectorAll(".button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", playRound())
+})
