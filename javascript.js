@@ -23,14 +23,14 @@ function playRoundRock(){
     const displayComputerScore = document.querySelector("#scoreOfComputer");
 
     if (humanChoice === "Rock" && computerChoice === "Rock") {
-    humanSelection.textContent = "YOUR CHOICE: ROCK";
-    computerSelection.textContent = "CPU CHOICE: ROCK";
+    humanSelection.textContent = "YOUR CHOICE: ✊";
+    computerSelection.textContent = "CPU CHOICE: ✊";
     result.textContent = "TIE!";
     }
 
     else if (humanChoice === "Rock" && computerChoice === "Paper") {
-    humanSelection.textContent = "YOUR CHOICE: ROCK";
-    computerSelection.textContent = "CPU CHOICE: PAPER";
+    humanSelection.textContent = "YOUR CHOICE: ✊";
+    computerSelection.textContent = "CPU CHOICE: 👋";
     result.textContent = "YOU LOSE!";
     computerScore++;
     displayHumanScore.textContent = humanScore;
@@ -38,8 +38,8 @@ function playRoundRock(){
     }
 
     else if (humanChoice === "Rock" && computerChoice === "Scissors") {
-    humanSelection.textContent = "YOUR CHOICE: ROCK";
-    computerSelection.textContent = "CPU CHOICE: SCISSORS";
+    humanSelection.textContent = "YOUR CHOICE: ✊";
+    computerSelection.textContent = "CPU CHOICE: ✌";
     result.textContent = "YOU WIN!";
     humanScore++;
     displayHumanScore.textContent = humanScore;
@@ -59,8 +59,8 @@ const displayHumanScore = document.querySelector("#scoreOfHuman");
 const displayComputerScore = document.querySelector("#scoreOfComputer");
 
 if (humanChoice === "Paper" && computerChoice === "Rock") {
-    humanSelection.textContent = "YOUR CHOICE: PAPER";
-    computerSelection.textContent = "CPU CHOICE: ROCK";
+    humanSelection.textContent = "YOUR CHOICE: 👋";
+    computerSelection.textContent = "CPU CHOICE: ✊";
     result.textContent = "YOU WIN!";
     humanScore++;
     displayHumanScore.textContent = humanScore;
@@ -68,14 +68,14 @@ if (humanChoice === "Paper" && computerChoice === "Rock") {
     }
 
 else if (humanChoice === "Paper" && computerChoice === "Paper") {
-    humanSelection.textContent = "YOUR CHOICE: PAPER";
-    computerSelection.textContent = "CPU CHOICE: PAPER";
+    humanSelection.textContent = "YOUR CHOICE: 👋";
+    computerSelection.textContent = "CPU CHOICE: 👋";
     result.textContent = "TIE!";
     }   
 
 else if (humanChoice === "Paper" && computerChoice === "Scissors") {
-    humanSelection.textContent = "YOUR CHOICE: PAPER";
-    computerSelection.textContent = "CPU CHOICE: SCISSORS";
+    humanSelection.textContent = "YOUR CHOICE: 👋";
+    computerSelection.textContent = "CPU CHOICE: ✌";
     result.textContent = "YOU LOSE!";
     computerScore++;
     displayHumanScore.textContent = humanScore;
@@ -95,8 +95,8 @@ function playRoundScissors(){
 
 
     if (humanChoice === "Scissors" && computerChoice === "Rock") {
-        humanSelection.textContent = "YOUR CHOICE: SCISSORS";
-        computerSelection.textContent = "CPU CHOICE: ROCK";
+        humanSelection.textContent = "YOUR CHOICE: ✌";
+        computerSelection.textContent = "CPU CHOICE: ✊";
         result.textContent = "YOU LOSE!";
         computerScore++;
         displayHumanScore.textContent = humanScore;
@@ -104,8 +104,8 @@ function playRoundScissors(){
     }
 
     else if (humanChoice === "Scissors" && computerChoice === "Paper") {
-        humanSelection.textContent = "YOUR CHOICE: SCISSORS";
-        computerSelection.textContent = "CPU CHOICE: PAPER";
+        humanSelection.textContent = "YOUR CHOICE: ✌";
+        computerSelection.textContent = "CPU CHOICE: 👋";
         result.textContent = "YOU WIN!";
         humanScore++;
         displayHumanScore.textContent = humanScore;
@@ -113,8 +113,8 @@ function playRoundScissors(){
     }
 
     else if (humanChoice === "Scissors" && computerChoice === "Scissors") {
-        humanSelection.textContent = "YOUR CHOICE: SCISSORS";
-        computerSelection.textContent = "CPU CHOICE: SCISSORS";
+        humanSelection.textContent = "YOUR CHOICE: ✌";
+        computerSelection.textContent = "CPU CHOICE: ✌";
     }
 }
 
