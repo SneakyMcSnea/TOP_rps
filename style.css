@@ -1,0 +1,118 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.head, .footer{
+    padding-top:100px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style:italic;
+    text-decoration: solid underline 4px;
+    /* border: 1px solid black; */
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    padding-top: 50px;
+    text-decoration: none;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    /* border: 1px solid green; */
+}
+
+.selection{
+    display:flex;
+    justify-content: center;
+    font-size: 100px;
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.selection:hover{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    background-color: rgba(9, 78, 0, 0.445);
+    cursor: pointer;   
+} 
+
+.button{
+    display:flex;
+    width: 150px;
+    justify-content: center;
+    margin: 0px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    /* border: 1px solid blue; */
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  width: 100%;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+  cursor: pointer;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.choice{
+    text-align: center;
+    /* margin: 0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px; */
+    /* border: 1px solid black; */
+}
+
+.player-choice, .computer-choice{
+    margin: 0px 20px 0px 0px;
+    /* border: 1px solid black; */
+}
+
+.icon{
+    width: 100px;
+    /* border: 1px solid black; */
+}
